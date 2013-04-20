@@ -26,10 +26,6 @@ App.TablesRoute = Ember.Route.extend({
 });
 
 App.TableRoute = Ember.Route.extend({
-  setupController: function(controller, model) {
-    this.controllerFor('Seasons').set('model', App.Season.find());
-  },
-
   renderTemplate: function() {
     this.render('table');
     this.render('seasons', {
@@ -42,5 +38,3 @@ App.TableRoute = Ember.Route.extend({
     });
   }
 });
-
-App.SeasonsController = Ember.ArrayController.extend({});

@@ -43,10 +43,9 @@
     <script type="text/x-handlebars" data-template-name="seasons">
       <div style="background-color: #f0ddcb;">
         <h2>Seasons</h2>
-        {{controller}}
-        ---
-        {{content}}
-        {{outlet}}
+        {{#each season in seasons}}
+          {{season.name}}
+        {{/each}}
       </div>
     </script>
 
@@ -72,7 +71,9 @@
     <script type="text/x-handlebars" data-template-name="rules">
       <div style="background-color: #f2cbcb;">
         <h2>Rules</h2>
-        {{outlet}}
+        {{#each rule in rules}}
+          {{rule.name}}
+        {{/each}}
       </div>
     </script>
 
