@@ -25,7 +25,7 @@
     <script type="text/x-handlebars" data-template-name="tables">
       <div style="background-color: #c7edd7;">
         {{#each table in controller}}
-          {{table.name}}
+          {{#linkTo table table}}{{table.name}}{{/linkTo}}
         {{/each}}
 
         {{outlet}}
