@@ -9,7 +9,7 @@ App.Router.map(function() {
 });
 
 App.IndexRoute = Ember.Route.extend({
-  setup: function() {
+  setupController: function() {
     return App.Table.find();
   },
 
