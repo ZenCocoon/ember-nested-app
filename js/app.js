@@ -5,6 +5,11 @@ window.App = Ember.Application.create();
 App.Router.map(function() {
   this.resource('tables', function() {
     this.resource('table', { path: ':table_id' });
+    // this.resource('table', { path: ':table_id' }, function() {
+    //   this.resource('seasons', function() {
+    //     this.resource('season', { path: ':season_id' });
+    //   });
+    // });
   });
 });
 

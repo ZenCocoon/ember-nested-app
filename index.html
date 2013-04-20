@@ -44,27 +44,27 @@
       <div style="background-color: #f0ddcb;">
         <h2>Seasons</h2>
         {{#each season in seasons}}
-          {{season.name}}
+          {{#with season}}
+            {{template 'season'}}
+          {{/with}}
         {{/each}}
       </div>
     </script>
 
     <script type="text/x-handlebars" data-template-name="season">
       <div style="background-color: #f0ddcb;">
-        <h2>{{name}}</h2>
-      </div>
-    </script>
-
-    <script type="text/x-handlebars" data-template-name="periods">
-      <div style="background-color: #c7eeed;">
-        <h2>Periods</h2>
-        {{outlet}}
+        <h3>{{name}}</h3>
+        {{#each period in periods}}
+          {{#with period}}
+            {{template 'period'}}
+          {{/with}}
+        {{/each}}
       </div>
     </script>
 
     <script type="text/x-handlebars" data-template-name="period">
       <div style="background-color: #c7eeed;">
-        <h2>{{name}}</h2>
+        <h4>{{name}}</h4>
       </div>
     </script>
 
@@ -72,14 +72,16 @@
       <div style="background-color: #f2cbcb;">
         <h2>Rules</h2>
         {{#each rule in rules}}
-          {{rule.name}}
+          {{#with rule}}
+            {{template 'rule'}}
+          {{/with}}
         {{/each}}
       </div>
     </script>
 
     <script type="text/x-handlebars" data-template-name="rule">
       <div style="background-color: #efeecc;">
-        <h2>{{name}}</h2>
+        <h3>{{name}}</h3>
       </div>
     </script>
 
